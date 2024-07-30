@@ -1,0 +1,172 @@
+@import "styles/base/variables";
+
+.hero {
+   padding: 48px 0;
+   background-color: rgb(251, 251, 251);
+   width: 100%;
+   max-width: 100%;
+
+   @media (max-width: 480px) {
+      padding: 32px 0;
+   }
+
+   &-content {
+      background-color: $colorWhite;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      margin: 0 12px;
+      border-radius: 2px;
+
+      &-header {
+         padding: 32px 40px;
+         border-bottom: 1px solid $colorGrey100;
+         display: flex;
+         justify-content: space-between;
+
+         @media (max-width: 900px) {
+            flex-direction: column;
+         }
+
+         @media (max-width: 480px) {
+            padding: 24px 32px;
+         }
+
+         &-left {
+            @media (max-width: 900px) {
+               margin-bottom: 48px;
+            }
+
+            @media (max-width: 480px) {
+               margin-bottom: 32px;
+            }
+
+            &__title {
+               font-size: 18px;
+               font-weight: 600;
+               color: darkturquoise;
+               margin-bottom: 24px;
+
+               @media (max-width: 480px) {
+                  font-size: 16px;
+                  margin-bottom: 16px;
+               }
+            }
+
+            &__subtitle {
+               font-size: 14px;
+               color: $colorGrey900;
+            }
+         }
+
+         &-right {
+            max-width: 300px;
+            width: 100%;
+
+            &-top {
+               display: flex;
+               justify-content: space-between;
+               margin-bottom: 40px;
+
+               @media (max-width: 480px) {
+                  margin-bottom: 24px;
+               }
+
+               &__title {
+                  font-size: 16px;
+                  font-weight: 600;
+
+                  @media (max-width: 480px) {
+                     font-size: 14px;
+                  }
+               }
+
+               &__percent {
+                  font-size: 16px;
+                  font-weight: 600;
+                  color: mediumseagreen;
+
+                  @media (max-width: 480px) {
+                     font-size: 14px;
+                  }
+               }
+            }
+
+            &-progress {
+               display: flex;
+               justify-content: space-between;
+
+               &__item {
+                  width: calc(20% - 2px);
+                  border-radius: 2px;
+                  height: 8px;
+                  background-color: mediumseagreen;
+               }
+            }
+         }
+      }
+
+      &-list {
+         display: flex;
+         justify-content: space-between;
+         padding: 40px;
+
+         @media (max-width: 1024px) {
+            flex-wrap: wrap;
+         }
+
+         @media (max-width: 480px) {
+            padding: 32px;
+         }
+
+         &-card {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: $colorWhite;
+            max-width: 23%;
+            width: 100%;
+            padding: 16px;
+            border-radius: 4px;
+
+            @media (max-width: 1024px) {
+               max-width: 47%;
+               margin-bottom: 32px;
+            }
+
+            @media (max-width: 600px) {
+               max-width: 100%;
+               margin-bottom: 16px;
+            }
+
+            &__check {
+               max-width: 32px;
+               width: 100%;
+               margin-bottom: 20px;
+
+               @media (max-width: 480px) {
+                  margin-bottom: 16px;
+                  max-width: 24px;
+               }
+
+               svg {
+                  width: 100%;
+                  height: auto;
+                  display: flex;
+               }
+            }
+
+            &__title {
+               font-size: 14px;
+               font-weight: 600;
+               margin-bottom: 16px;
+
+               @media (max-width: 480px) {
+                  margin-bottom: 14px;
+               }
+            }
+
+            &__subtitle {
+               font-size: 12px;
+               color: $colorGrey900;
+            }
+         }
+      }
+   }
+}
